@@ -1,0 +1,2 @@
+
+Artificial Intelligence (AI) refers to the simulation of human intelligence in machines. It is widely applied in various fields such as healthcare, finance, education, and transportation. AI technologies include machine learning, natural language processing, and robotics. The impact of AI is significant, enabling automation, enhancing decision-making, and creating new opportunities. However, it also raises concerns regarding ethics, job displacement, and data privacy.
