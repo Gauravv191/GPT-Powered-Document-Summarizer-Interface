@@ -24,3 +24,31 @@ Open your web browser and go to http://127.0.0.1:5000/.
 Upload a document (.txt, .pdf, or .docx) and select the summary type.
 
 Click "Summarize" to get the summary.
+
+
+
+
+
+# Document Summarizer
+
+
+## Overview
+This is a Python-based tool that summarizes documents using a GPT-powered API.
+
+
+## Requirements
+- Python 3.x
+- Flask
+- PyPDF2
+- python-docx
+- requests
+
+
+## Installation
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+
+
