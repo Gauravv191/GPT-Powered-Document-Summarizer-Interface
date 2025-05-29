@@ -1,0 +1,48 @@
+HTML = """
+<!doctype html>
+<html lang="en">
+<head>
+  <title>GPT Document Summarizer</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f7f8; color: #2c3e50; margin: 40px; }
+    h1 { color: #34495e; }
+    label, select, input, button { font-size: 1.1em; margin-top: 10px; }
+    .summary-box { background-color: #ecf0f1; border-radius: 8px; padding: 15px; max-width: 700px; margin-top: 20px; }
+    ul { margin-top: 0; }
+    .error { color: red; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Upload your document (.txt, .pdf, .docx) for summarization</h1>
+  <form method="post" enctype="multipart/form-data">
+    <label for="length">Summary length:</label>
+    <select name="length">
+      <option value="short">Short</option>
+      <option value="medium" selected>Medium</option>
+      <option value="long">Long</option>
+    </select>
+    <br><br>
+    <input type="file" name="file" accept=".txt,.pdf,.docx" required>
+    <button type="submit">Summarize</button>
+  </form>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="error">
+        <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  {% if summary %}
+    <h2>Summary:</h2>
+    <div class="summary-box">
+      {{ summary|safe }}
+    </div>
+  {% endif %}
+</body>
+</html>
+"""
